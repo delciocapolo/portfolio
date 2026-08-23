@@ -1,0 +1,48 @@
+services:
+  api:
+    build:
+      context: ../backend
+      target: dev_dependencies
+    entrypoint: []
+    command: ["pnpm", "run", "dev"]
+    volumes:
+      - ../backend/src:/usr/src/app/src
+      - ../backend/package.json:/usr/src/app/package.json
+      - ../backend/tsconfig.json:/usr/src/app/tsconfig.json
+      - ../backend/tsup.config.ts:/usr/src/app/tsup.config.ts
+      - ../backend/.sequelizerc:/usr/src/app/.sequelizerc
+    environment:
+      - NODE_ENV=dev
+
+  client:
+    build:
+      context: ../frontend
+      target: dev_dependencies
+    entrypoint: []
+    command: ["pnpm", "run", "dev"]
+    ports:
+      - "${VITE_APP_PORT}:3000"
+    volumes:
+      - ../frontend/src:/usr/src/app/src
+      - ../frontend/public:/usr/src/app/public
+      - ../frontend/package.json:/usr/src/app/package.json
+      - ../frontend/pnpm-lock.yaml:/usr/src/app/pnpm-lock.yaml
+      - ../frontend/tsconfig.json:/usr/src/app/tsconfig.json
+      - ../frontend/vite.config.ts:/usr/src/app/vite.config.ts
+      - ../frontend/pnpm-workspace.yaml:/usr/src/app/pnpm-workspace.yaml
+    environment:
+      - NODE_ENV=dev
+
+  nginx:
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./certs:/etc/letsencrypt:ro
+
+  evolution-api:
+    ports:
+      - "8080:8080"
+
+  db:
+    ports:
+      - "5432:5432"

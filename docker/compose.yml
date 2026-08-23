@@ -1,0 +1,139 @@
+name: "portfolio"
+
+services:
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: portfolio_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      api:
+        condition: service_healthy
+      client:
+        condition: service_started
+    networks:
+      - portfolio_network
+
+  api:
+    build:
+      context: ../backend
+      target: production
+    platform: linux/amd64
+    image: delciocapolo/portfolio-api:latest
+    container_name: portfolio_api
+    restart: unless-stopped
+    env_file:
+      - path: ../secrets/.env
+        required: true
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider",
+          "http://localhost:${SERVER_PORT}/api/health",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - portfolio_network
+
+  client:
+    build:
+      context: ../frontend
+      target: production
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+        VITE_APP_NAME: ${VITE_APP_NAME:-"Délcio Capolo"}
+    platform: linux/amd64
+    image: delciocapolo/portfolio-client:latest
+    container_name: portfolio_client
+    restart: unless-stopped
+    env_file:
+      - path: ../secrets/.env
+        required: true
+    networks:
+      - portfolio_network
+    depends_on:
+      api:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    container_name: portfolio_postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - portfolio_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: portfolio_redis
+    restart: unless-stopped
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    command:
+      ["redis-server", "--requirepass", "${REDIS_PASSWORD}", "--appendonly yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - redis_data:/data
+    networks:
+      - portfolio_network
+
+  rabbitmq:
+    image: rabbitmq:4-management-alpine
+    container_name: portfolio_rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBIT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBIT_PASSWORD}
+    ports:
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - portfolio_network
+
+networks:
+  portfolio_network:
+    driver: bridge
+
+volumes:
+  db_data:
+  redis_data:
+  rabbitmq_data:
