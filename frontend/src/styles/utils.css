@@ -1,0 +1,75 @@
+@reference "tailwindcss";
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@utility container {
+  width: 100%;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 70rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 78rem;
+  }
+}
+
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}
+
+@utility no-scroll {
+  overflow: hidden;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: 0.8s cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  &.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@utility shadow-border-style {
+  box-shadow: 5px 5px 0 #17130d;
+  border: 3px solid #17130d;
+}
+
+@utility text-stroke {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #17130d;
+  -webkit-text-fill-color: currentColor;
+  paint-order: stroke fill;
+  color: transparent;
+}

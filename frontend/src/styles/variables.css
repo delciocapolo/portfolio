@@ -1,0 +1,114 @@
+:root {
+  --background: oklch(100% 0 0);
+  --background-accent: oklch(0% 0 0 / 0.04);
+  --foreground: oklch(0% 0 0);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(0% 0 0);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(0% 0 0);
+
+  /* ★ Primary — tinta. É o preto que carrega os botões e o traço */
+  --muted: oklch(96% 0 0);
+  --muted-foreground: oklch(52% 0 0);
+  --accent: oklch(94% 0 0);
+  --accent-foreground: oklch(0% 0 0);
+  --destructive: oklch(45% 0.15 28);
+  --border: oklch(90% 0 0);
+  --input: oklch(83% 0 0);
+
+  /* ★ Ring segue a primária */
+  --ring: oklch(0% 0 0);
+
+  /* ★ Gráficos — o portfolio é monocromático, o
+  ç.s dados também */
+  --chart-1: oklch(0% 0 0);
+  --chart-2: oklch(30% 0 0);
+  --chart-3: oklch(52% 0 0);
+  --chart-4: oklch(71% 0 0);
+  --chart-5: oklch(87% 0 0);
+
+  --radius: 0.1875rem;
+  --radius-pill: 999px;
+  --radius-panel: 0.5rem;
+
+  --sidebar: oklch(0% 0 0);
+  --sidebar-foreground: oklch(100% 0 0);
+  --sidebar-primary: oklch(100% 0 0);
+  --sidebar-primary-foreground: oklch(0% 0 0);
+  --sidebar-accent: oklch(22% 0 0);
+  --sidebar-accent-foreground: oklch(100% 0 0);
+  --sidebar-border: oklch(100% 0 0 / 12%);
+  --sidebar-ring: oklch(100% 0 0);
+
+  /* ★ Escala primária — neutra pura, o eixo do portfolio */
+  --primary-900: oklch(0% 0 0);
+  --primary-800: oklch(14.5% 0 0);
+  --primary-700: oklch(22% 0 0);
+  --primary-600: oklch(30% 0 0);
+  --primary-500: oklch(40% 0 0);
+  --primary-400: oklch(52% 0 0);
+  --primary-300: oklch(71% 0 0);
+  --primary-200: oklch(87% 0 0);
+  --primary-100: oklch(96% 0 0);
+
+  /* ★ Painel — as faixas pretas (Experience, Projects, Serviços, newsletter) */
+  --panel: oklch(14.5% 0 0);
+  --panel-foreground: oklch(100% 0 0);
+  --panel-muted: oklch(72% 0 0);
+  --panel-border: oklch(24% 0 0);
+
+  /* ★ Traço e sombra sólida — a hierarquia do portfolio faz-se aqui */
+  --stroke: oklch(0% 0 0);
+  --stroke-width: 2px;
+  --stroke-width-heavy: 3px;
+  --shadow-solid: 8px 8px 0 oklch(0% 0 0);
+  --shadow-solid-inverse: 8px 8px 0 oklch(100% 0 0);
+
+  /* Gray */
+  --gray-950: oklch(10% 0 0);
+  --gray-900: oklch(15% 0 0);
+  --gray-800: oklch(22% 0 0);
+  --gray-700: oklch(30% 0 0);
+  --gray-600: oklch(40% 0 0);
+  --gray-500: oklch(52% 0 0);
+  --gray-400: oklch(64% 0 0);
+  --gray-300: oklch(75% 0 0);
+  --gray-200: oklch(87% 0 0);
+  --gray-100: oklch(94% 0 0);
+  --gray-50: oklch(97% 0 0);
+
+  /* Success — só o selo de disponibilidade e confirmações */
+  --success-900: oklch(26% 0.06 150);
+  --success-700: oklch(45% 0.1 150);
+  --success-600: oklch(55% 0.11 150);
+  --success-500: oklch(66% 0.1 150);
+  --success-200: oklch(92% 0.04 150);
+  --success-100: oklch(97% 0.02 150);
+
+  /* Warning */
+  --warning-900: oklch(34% 0.07 75);
+  --warning-700: oklch(54% 0.1 75);
+  --warning-600: oklch(64% 0.11 75);
+  --warning-500: oklch(75% 0.1 75);
+  --warning-200: oklch(94% 0.04 75);
+  --warning-100: oklch(98% 0.02 75);
+
+  /* Error */
+  --error-900: oklch(28% 0.11 28);
+  --error-700: oklch(45% 0.15 28);
+  --error-600: oklch(55% 0.16 28);
+  --error-500: oklch(66% 0.15 28);
+  --error-200: oklch(94% 0.05 28);
+  --error-100: oklch(98% 0.025 28);
+
+  /* Info */
+  --info-900: oklch(30% 0.07 250);
+  --info-700: oklch(48% 0.1 250);
+  --info-600: oklch(58% 0.11 250);
+  --info-500: oklch(70% 0.1 250);
+  --info-200: oklch(94% 0.04 250);
+  --info-100: oklch(98% 0.02 250);
+
+  /* Configs */
+  --header-height: 76px;
+}
