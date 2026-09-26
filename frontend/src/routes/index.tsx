@@ -184,9 +184,10 @@ function Home() {
           </p>
           <Link
             to="/about"
-            className="border-ink inline-flex items-center gap-2.5 border-b-2 pb-0.5 text-sm font-bold"
+            className="border-ink inline-flex items-center gap-2 border-b-2 pb-0.5 text-sm font-bold"
           >
-            Ler a história completa <span>↗</span>
+            Ler a história completa
+            <Icon icon={"lucide:square-arrow-out-up-right"} />
           </Link>
         </div>
       </Container>
@@ -243,14 +244,15 @@ function Home() {
       </Container>
 
       {/* Do Blog */}
-      <Container className="mx-auto max-w-[1216px] px-6 py-24">
+      <Container className="mx-auto max-w-[1216px] px-6 py-24 pb-0">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <SectionTitle description="Do" title="Blog" />
           <Link
             to="/blog"
-            className="border-ink border-b-2 pb-0.5 text-sm font-bold"
+            className="border-ink border-b-2 pb-0.5 text-sm font-bold flex-center gap-2"
           >
-            Ver todos os artigos ↗
+            Ver todos os artigos
+            <Icon icon={"lucide:square-arrow-out-up-right"} />
           </Link>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
@@ -276,18 +278,18 @@ function Home() {
       </Container>
 
       {/* Do Creative */}
-      <Container>
+      <Container className="pb-0">
         <div className="mb-7 flex flex-wrap items-end justify-between gap-6">
           <SectionTitle description="Do" title="Creative" />
           <Link
             to="/creative"
             className={cn(
-              "flex-center gap-1",
+              "flex-center gap-2",
               "border-ink border-b-2 pb-0.5 text-body-16 font-bold",
             )}
           >
             Ver a galeria
-            <Icon icon={"bi:arrow-up-right"} />
+            <Icon icon={"lucide:square-arrow-out-up-right"} />
           </Link>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5">
@@ -309,12 +311,12 @@ function Home() {
       </Container>
 
       {/* Testimonial */}
-      <Container>
+      <Container className="pb-0">
         <SectionTitle
-          description="My"
-          title="Testimonial"
           center
+          description="My"
           className="mb-12"
+          title="Testimonial"
         />
         <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] items-center gap-6">
           {resume?.testimonials?.map((d) => {
