@@ -43,22 +43,28 @@ export const experiencia = [
 
 export const projectos = [
   {
+    url: "/",
+    isOnline: true,
     title: "Crypto Screener Application",
     description:
       "Painel em tempo real para seguir centenas de activos, com alertas, listas pessoais e gráficos históricos. O desafio foi manter a interface fluida com actualizações constantes.",
-    stacks: "Next.js · WebSockets · PostgreSQL",
+    stacks: ["Next.js", "WebSockets", "PostgreSQL"],
   },
   {
+    url: "/",
+    isOnline: true,
     title: "Euphoria — Ecommerce (Apparels)",
     description:
       "Loja completa com catálogo, carrinho, pagamentos e painel de gestão de stock. Desenhada para carregar depressa em ligações lentas.",
-    stacks: "React · Nest.js · Prisma",
+    stacks: ["React", "Nest.js", "Prisma"],
   },
   {
+    url: "/",
+    isOnline: true,
     title: "Blog Website Template",
     description:
       "Template de blog com editor, rascunhos e publicação agendada. Serve de base aos sites de conteúdo que entrego a clientes.",
-    stacks: "Next.js · MDX · Tailwind",
+    stacks: ["Next.js", "MDX", "Tailwind"],
   },
 ];
 

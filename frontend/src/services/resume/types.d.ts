@@ -20,8 +20,10 @@ export interface IExperience {
 }
 
 export interface IProject {
+  url: string;
   title: string;
-  stacks: string;
+  stacks: string[];
+  isOnline: boolean;
   description: string;
 }
 

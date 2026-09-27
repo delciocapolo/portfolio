@@ -207,7 +207,7 @@ function Home() {
             className="mb-14"
           />
           <ul className="flex flex-col gap-10">
-            {resume?.projects?.map((p, i) => (
+            {resume?.projects?.map((project, i) => (
               <li
                 key={i}
                 className={cn(
@@ -225,22 +225,22 @@ function Home() {
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <h3 className="m-0 mb-3.5 text-headline-24 font-bold tracking-[-0.01em]">
-                    {p.title}
+                    {project.title}
                   </h3>
                   <p className="m-0 mb-5 max-w-[520px] text-body-16 leading-[1.8] text-neutral-400">
-                    {p.description}
+                    {project.description}
                   </p>
                   <div className="mb-5.5 text-body-14 font-semibold tracking-[0.1em] text-neutral-500 uppercase">
-                    {p.stacks}
+                    {project.stacks.join(" · ")}
                   </div>
-                  <Link
-                    to="/"
-                    target="_blank"
+                  <a
+                    href={project.url}
                     rel="noopener noreferrer"
+                    target={project.isOnline ? "_blank" : "_self"}
                     className="text-xl text-white no-underline hover:opacity-70 flex items-start py-3"
                   >
                     <Icon icon={"lucide:square-arrow-out-up-right"} />
-                  </Link>
+                  </a>
                 </div>
               </li>
             ))}
@@ -329,15 +329,15 @@ function Home() {
               <div
                 key={d.name}
                 className={cn(
-                  "rounded border px-7 py-10 text-center duration-150",
-                  "hover:bg-ink hover:border-ink hover:text-white",
-                  "border-neutral-200 bg-neutral-50",
+                  "group rounded border px-7 py-10 text-center",
+                  "border-neutral-200 bg-neutral-50 duration-150",
+                  "hover:bg-ink hover:border-ink hover:text-white transition-transform hover:-translate-y-1",
                 )}
               >
                 <div
                   className={cn(
-                    "mx-auto mb-6 size-16 rounded-full border border-black duration-150",
-                    "hover:border-white",
+                    "mx-auto mb-6 size-16 rounded-full border border-black",
+                    "group-hover:border-white",
                   )}
                 />
                 <p className="m-0 mb-6 text-body-16 leading-[1.8]">
@@ -345,8 +345,8 @@ function Home() {
                 </p>
                 <div
                   className={cn(
-                    "mx-auto mb-4 h-px w-10 duration-150",
-                    "hover:bg-white bg-black",
+                    "mx-auto mb-4 h-px w-10",
+                    "group-hover:bg-white bg-black",
                   )}
                 />
                 <div className="text-body-16 font-bold">{d.name}</div>
