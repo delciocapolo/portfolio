@@ -49,7 +49,7 @@ export function ItemsNavbarMobile() {
             key={menu.to}
             to={menu.to}
             className="border-b-2 border-transparent py-3 w-full"
-            activeProps={{ className: "border-b-2 border-ink pb-0.5" }}
+            activeProps={{ className: "font-extrabold" }}
           >
             {menu.label}
           </Link>

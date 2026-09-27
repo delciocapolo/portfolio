@@ -46,7 +46,7 @@ function Contact() {
             ? "Disponível para novos projectos"
             : "Agenda fechada até nova data"}
         </div>
-        <h1 className="m-0 mb-6 text-display-80 leading-none font-medium tracking-[-0.035em]">
+        <h1 className="m-0 mb-6 text-headline-64 leading-tight font-medium tracking-[-0.035em]">
           Vamos <span className="font-extrabold">conversar</span>
           <br />O que tens em mente?
         </h1>
@@ -113,7 +113,7 @@ function Contact() {
           <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-6">
             {resume?.services?.map((service, index) => (
               <div key={service.name} className="bg-panel rounded-lg p-8">
-                <div className="mb-4.5 text-headline-40 font-extrabold">
+                <div className="mb-4.5 text-headline-32 font-extrabold">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div className="mb-2.5 text-headline-20 font-bold">

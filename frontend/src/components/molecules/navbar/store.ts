@@ -10,11 +10,12 @@ export const MENU_INITIAL_VALUES: INavbarStore = {
 
 export const store = createStore<INavbarStore>(MENU_INITIAL_VALUES);
 
+export const onToggleNavbarIsActive = () => {
+  store.setState((prev) => ({ ...prev, isActive: !prev }));
+};
+
 export const updateNavbarIsActive = (isActive: boolean) => {
-  store.setState((prev) => ({
-    ...prev,
-    isActive: isActive,
-  }));
+  store.setState((prev) => ({ ...prev, isActive: isActive }));
 };
 
 export const resetNavbarStore = () => {

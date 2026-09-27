@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { resumeService } from "@src/services/resume/index.service";
 import { getResponseData } from "@src/components/utils";
 import Container from "@src/components/atoms/container";
+import { cn } from "@src/lib/utils";
 
 export const Route = createFileRoute("/about/")({
   head: () => ({ meta: [{ title: "Sobre Mim — Délcio Capolo" }] }),
@@ -74,12 +75,17 @@ function RouteComponent() {
         </div>
       </Container>
 
-      <Container className="pb-22">
-        <div className="border-ink flex justify-between items-center border-t-2 border-b-2">
+      <Container className="py-0">
+        <div
+          className={cn(
+            "border-ink border-t-2 border-b-2",
+            "grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] place-items-center text-center",
+          )}
+        >
           {resume?.experienceResume?.map((experienceResume) => (
             <div
               key={experienceResume.label}
-              className="px-7 py-8 first:pl-0 last:pr-0"
+              className="px-7 py-8 lg:first:pl-0 lg:last:pr-0"
             >
               <div className="text-headline-56 leading-none font-extrabold tracking-[-0.03em] text-center">
                 {experienceResume.value}
@@ -156,7 +162,7 @@ function RouteComponent() {
         </div>
       </Container>
 
-      <Container>
+      <Container className="pt-0">
         <div className="border-ink flex flex-wrap items-center justify-between gap-8 rounded-xl border-2 p-12">
           <div>
             <div className="mb-2.5 text-headline-40 font-medium tracking-[-0.02em]">
@@ -170,7 +176,7 @@ function RouteComponent() {
             to="/contact"
             className="bg-ink rounded px-8 py-4 text-body-18 font-semibold whitespace-nowrap text-white no-underline hover:opacity-85"
           >
-            Get In Touch
+            Entrar em Contacto
           </Link>
         </div>
       </Container>

@@ -18,6 +18,7 @@ import type {
   ISkill,
   ITestimonial,
 } from "@src/services/resume/types";
+import FadeTicker from "@src/components/molecules/fade-ticket";
 
 interface ILoaderData {
   me: IResumeMe;
@@ -70,11 +71,10 @@ function Home() {
       {/* Hero */}
       <Container className="flex flex-wrap items-center gap-12 px-6 pt-18 pb-0">
         <div className="min-w-[300px] flex-1 basis-[420px]">
+          <FadeTicker />
           <h1 className="m-0 mb-6.5 text-headline-56 leading-[1.18] font-medium tracking-[-0.03em]">
-            Hello, <span className="font-extrabold">World.</span>
-            <br />
-            <span className="font-extrabold">Fullstack</span>{" "}
-            <span className="font-extrabold text-stroke">Developer</span>
+            <span className="font-extrabold">Logo, eu</span>{" "}
+            <span className="font-extrabold text-stroke">compilo</span>
             <br />
             Sediado em <span className="font-extrabold">Angola.</span>
           </h1>
@@ -98,11 +98,16 @@ function Home() {
       <Container>
         <SectionTitle
           center
-          title="Skills"
-          description="My"
+          title="Habilidades"
+          description="Minhas"
           className="mb-12"
         />
-        <ul className="grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-5">
+        <ul
+          className={cn(
+            "grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-5",
+            "max-lg:grid-cols-[repeat(auto-fill,minmax(150px,1fr))]",
+          )}
+        >
           {resume?.skills?.map((skill, i) => (
             <li
               key={i}
@@ -123,8 +128,8 @@ function Home() {
         <div className="mx-auto max-w-[1000px]">
           <SectionTitle
             center
-            description="My"
-            title="Experience"
+            description="Minha"
+            title="Experiência"
             className="mb-12"
           />
           <ul className="flex flex-col gap-5">
@@ -166,7 +171,7 @@ function Home() {
           </div>
         </div>
         <div className="min-w-[300px] flex-1 basis-[420px]">
-          <SectionTitle description="About" title="Me" className="mb-6.5" />
+          <SectionTitle description="Sobre" title="Mim" className="mb-6.5" />
           <p className="m-0 mb-4.5 text-sm leading-[1.85] text-neutral-700">
             Sou desenvolvedor fullstack em Luanda, com sete anos a escrever
             código. Trabalho sobretudo com React, Next.js, Nest.js e Prisma, e
@@ -197,8 +202,8 @@ function Home() {
         <Container className="py-0 px-0">
           <SectionTitle
             center
-            description="My"
-            title="Projects"
+            description="Meus"
+            title="Projectos"
             className="mb-14"
           />
           <ul className="flex flex-col gap-10">
@@ -314,9 +319,9 @@ function Home() {
       <Container className="pb-0">
         <SectionTitle
           center
-          description="My"
+          description="Minhas"
           className="mb-12"
-          title="Testimonial"
+          title="Testemunhas"
         />
         <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] items-center gap-6">
           {resume?.testimonials?.map((d) => {

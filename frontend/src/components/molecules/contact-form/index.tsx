@@ -143,7 +143,7 @@ export function ContactForm() {
         type="submit"
         className="bg-ink mt-1.5 self-start rounded px-8 py-4 text-sm font-semibold text-white hover:opacity-85"
       >
-        Get In Touch
+        Entrar em Contacto
       </button>
       {isFormSubmited && (
         <p className="border-ink m-0 rounded border-2 px-4.5 py-3.5 text-sm font-semibold">
