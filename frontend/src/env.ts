@@ -1,5 +1,5 @@
-import { z } from 'zod'
-import { createEnv } from '@t3-oss/env-core'
+import { z } from "zod";
+import { createEnv } from "@t3-oss/env-core";
 
 export const env = createEnv({
   server: {
@@ -10,11 +10,11 @@ export const env = createEnv({
    * The prefix that client-side variables must have. This is enforced both at
    * a type-level and at runtime.
    */
-  clientPrefix: 'VITE_',
+  clientPrefix: "VITE_",
 
   client: {
     VITE_API_URL: z.url().optional(),
-    VITE_APP_NAME: z.string().optional().default('Délcio Capolo - Portfólio'),
+    VITE_APP_NAME: z.string().optional().default("Délcio Capolo"),
   },
 
   /**
@@ -37,4 +37,4 @@ export const env = createEnv({
    * explicitly specify this option as true.
    */
   emptyStringAsUndefined: true,
-})
+});

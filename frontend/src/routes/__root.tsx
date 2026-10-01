@@ -4,7 +4,9 @@ import {
   Outlet,
   Scripts,
   createRootRoute,
+  useRouterState,
 } from "@tanstack/react-router";
+import { ClerkProvider } from "@clerk/tanstack-react-start";
 import appCss from "@src/styles.css?url";
 import { Nav } from "@src/components/molecules/navbar";
 import { Footer } from "@src/components/molecules/footer";
@@ -31,6 +33,12 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
+  const isAdmin = useRouterState({
+    select: (s) => s.location.pathname.startsWith("/admin"),
+  });
+
+  if (isAdmin) return <Outlet />;
+
   return (
     <>
       <Nav />
@@ -44,14 +52,16 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="pt">
+        <head>
+          <HeadContent />
+        </head>
+        <body>
+          {children}
+          <Scripts />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

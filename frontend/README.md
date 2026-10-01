@@ -13,14 +13,14 @@ O `routeTree.gen.ts` é gerado pelo plugin do TanStack no primeiro `dev`/`build`
 
 ## Rotas
 
-| Ficheiro | URL |
-| --- | --- |
-| `src/routes/index.tsx` | `/` — hero, skills, experience, about, projects, teaser do blog e do creative, testimonial, contacto |
-| `src/routes/about.tsx` | `/about` — bio, números, percurso, stack, princípios |
-| `src/routes/blog.index.tsx` | `/blog` — grelha com filtros por categoria + newsletter |
-| `src/routes/blog.$slug.tsx` | `/blog/:slug` — página de leitura (`loader` + `notFound()`) |
-| `src/routes/creative.tsx` | `/creative` — masonry com filtros e lightbox |
-| `src/routes/contact.tsx` | `/contact` — formulário, disponibilidade, serviços, FAQ |
+| Ficheiro                    | URL                                                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `src/routes/index.tsx`      | `/` — hero, skills, experience, about, projects, teaser do blog e do creative, testimonial, contacto |
+| `src/routes/about.tsx`      | `/about` — bio, números, percurso, stack, princípios                                                 |
+| `src/routes/blog.index.tsx` | `/blog` — grelha com filtros por categoria + newsletter                                              |
+| `src/routes/blog.$slug.tsx` | `/blog/:slug` — página de leitura (`loader` + `notFound()`)                                          |
+| `src/routes/creative.tsx`   | `/creative` — masonry com filtros e lightbox                                                         |
+| `src/routes/contact.tsx`    | `/contact` — formulário, disponibilidade, serviços, FAQ                                              |
 
 ## Onde editar
 

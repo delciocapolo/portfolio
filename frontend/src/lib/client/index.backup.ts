@@ -1,9 +1,6 @@
 import axios from "axios";
 import { env } from "@src/env";
-
-type ClerkWindow = Window & {
-  Clerk?: { session?: { getToken: () => Promise<string | null> } | null };
-};
+import { getToken } from "./utils";
 
 const client = axios.create({
   baseURL: env.VITE_API_URL,
@@ -15,11 +12,13 @@ const client = axios.create({
 });
 
 client.interceptors.request.use(
-  async (config) => {
-    if (typeof window !== "undefined" && !config.headers.Authorization) {
-      const token = await (window as ClerkWindow).Clerk?.session?.getToken();
-      if (token) config.headers.Authorization = `Bearer ${token}`;
+  (config) => {
+    const AUTH_TOKEN = getToken();
+
+    if (AUTH_TOKEN && AUTH_TOKEN !== null && !config.headers.Authorization) {
+      config.headers.Authorization = `Bearer ${AUTH_TOKEN}`;
     }
+
     return config;
   },
   (error) => Promise.reject(error),

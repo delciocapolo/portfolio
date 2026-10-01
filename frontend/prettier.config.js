@@ -4,9 +4,9 @@
 const config = {
   semi: true,
   singleQuote: false,
-  trailingComma: 'all',
+  trailingComma: "all",
   tabWidth: 2,
-  endOfLine: 'lf',
-}
+  endOfLine: "lf",
+};
 
-export default config
+export default config;
