@@ -8,452 +8,452 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as IndexRouteImport } from "./routes/index";
-import { Route as AboutIndexRouteImport } from "./routes/about/index";
-import { Route as AdminPanelRouteRouteImport } from "./routes/admin/_panel/route";
-import { Route as BlogIndexRouteImport } from "./routes/blog/index";
-import { Route as BlogSlugRouteImport } from "./routes/blog/$slug";
-import { Route as ContactIndexRouteImport } from "./routes/contact/index";
-import { Route as CreativeIndexRouteImport } from "./routes/creative/index";
-import { Route as AdminPanelIndexRouteImport } from "./routes/admin/_panel/index";
-import { Route as AdminPanelCategoriasRouteImport } from "./routes/admin/_panel/categorias";
-import { Route as AdminPanelCreativeRouteImport } from "./routes/admin/_panel/creative";
-import { Route as AdminPanelDepoimentosRouteImport } from "./routes/admin/_panel/depoimentos";
-import { Route as AdminPanelExperienciaRouteImport } from "./routes/admin/_panel/experiencia";
-import { Route as AdminPanelMensagensRouteImport } from "./routes/admin/_panel/mensagens";
-import { Route as AdminPanelNewsletterRouteImport } from "./routes/admin/_panel/newsletter";
-import { Route as AdminPanelPerfilRouteImport } from "./routes/admin/_panel/perfil";
-import { Route as AdminPanelProjectosRouteImport } from "./routes/admin/_panel/projectos";
-import { Route as AdminPanelServicosFaqRouteImport } from "./routes/admin/_panel/servicos-faq";
-import { Route as AdminPanelSkillsRouteImport } from "./routes/admin/_panel/skills";
-import { Route as AdminSignInSplatRouteImport } from "./routes/admin/sign-in/$";
-import { Route as AdminPanelArtigosIndexRouteImport } from "./routes/admin/_panel/artigos/index";
-import { Route as AdminPanelArtigosSlugRouteImport } from "./routes/admin/_panel/artigos/$slug";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as AdminPanelRouteRouteImport } from './routes/admin/_panel/route'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
+import { Route as ContactIndexRouteImport } from './routes/contact/index'
+import { Route as CreativeIndexRouteImport } from './routes/creative/index'
+import { Route as AdminPanelIndexRouteImport } from './routes/admin/_panel/index'
+import { Route as AdminPanelCategoriasRouteImport } from './routes/admin/_panel/categorias'
+import { Route as AdminPanelCreativeRouteImport } from './routes/admin/_panel/creative'
+import { Route as AdminPanelDepoimentosRouteImport } from './routes/admin/_panel/depoimentos'
+import { Route as AdminPanelExperienciaRouteImport } from './routes/admin/_panel/experiencia'
+import { Route as AdminPanelMensagensRouteImport } from './routes/admin/_panel/mensagens'
+import { Route as AdminPanelNewsletterRouteImport } from './routes/admin/_panel/newsletter'
+import { Route as AdminPanelPerfilRouteImport } from './routes/admin/_panel/perfil'
+import { Route as AdminPanelProjectosRouteImport } from './routes/admin/_panel/projectos'
+import { Route as AdminPanelServicosFaqRouteImport } from './routes/admin/_panel/servicos-faq'
+import { Route as AdminPanelSkillsRouteImport } from './routes/admin/_panel/skills'
+import { Route as AdminSignInSplatRouteImport } from './routes/admin/sign-in/$'
+import { Route as AdminPanelArtigosIndexRouteImport } from './routes/admin/_panel/artigos/index'
+import { Route as AdminPanelArtigosSlugRouteImport } from './routes/admin/_panel/artigos/$slug'
 
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AboutIndexRoute = AboutIndexRouteImport.update({
-  id: "/about/",
-  path: "/about/",
+  id: '/about/',
+  path: '/about/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AdminPanelRouteRoute = AdminPanelRouteRouteImport.update({
-  id: "/admin/_panel",
-  path: "/admin",
+  id: '/admin/_panel',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: "/blog/",
-  path: "/blog/",
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: "/blog/$slug",
-  path: "/blog/$slug",
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ContactIndexRoute = ContactIndexRouteImport.update({
-  id: "/contact/",
-  path: "/contact/",
+  id: '/contact/',
+  path: '/contact/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const CreativeIndexRoute = CreativeIndexRouteImport.update({
-  id: "/creative/",
-  path: "/creative/",
+  id: '/creative/',
+  path: '/creative/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AdminPanelIndexRoute = AdminPanelIndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelCategoriasRoute = AdminPanelCategoriasRouteImport.update({
-  id: "/categorias",
-  path: "/categorias",
+  id: '/categorias',
+  path: '/categorias',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelCreativeRoute = AdminPanelCreativeRouteImport.update({
-  id: "/creative",
-  path: "/creative",
+  id: '/creative',
+  path: '/creative',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelDepoimentosRoute = AdminPanelDepoimentosRouteImport.update({
-  id: "/depoimentos",
-  path: "/depoimentos",
+  id: '/depoimentos',
+  path: '/depoimentos',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelExperienciaRoute = AdminPanelExperienciaRouteImport.update({
-  id: "/experiencia",
-  path: "/experiencia",
+  id: '/experiencia',
+  path: '/experiencia',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelMensagensRoute = AdminPanelMensagensRouteImport.update({
-  id: "/mensagens",
-  path: "/mensagens",
+  id: '/mensagens',
+  path: '/mensagens',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelNewsletterRoute = AdminPanelNewsletterRouteImport.update({
-  id: "/newsletter",
-  path: "/newsletter",
+  id: '/newsletter',
+  path: '/newsletter',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelPerfilRoute = AdminPanelPerfilRouteImport.update({
-  id: "/perfil",
-  path: "/perfil",
+  id: '/perfil',
+  path: '/perfil',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelProjectosRoute = AdminPanelProjectosRouteImport.update({
-  id: "/projectos",
-  path: "/projectos",
+  id: '/projectos',
+  path: '/projectos',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelServicosFaqRoute = AdminPanelServicosFaqRouteImport.update({
-  id: "/servicos-faq",
-  path: "/servicos-faq",
+  id: '/servicos-faq',
+  path: '/servicos-faq',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelSkillsRoute = AdminPanelSkillsRouteImport.update({
-  id: "/skills",
-  path: "/skills",
+  id: '/skills',
+  path: '/skills',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminSignInSplatRoute = AdminSignInSplatRouteImport.update({
-  id: "/admin/sign-in/$",
-  path: "/admin/sign-in/$",
+  id: '/admin/sign-in/$',
+  path: '/admin/sign-in/$',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AdminPanelArtigosIndexRoute = AdminPanelArtigosIndexRouteImport.update({
-  id: "/artigos/",
-  path: "/artigos/",
+  id: '/artigos/',
+  path: '/artigos/',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 const AdminPanelArtigosSlugRoute = AdminPanelArtigosSlugRouteImport.update({
-  id: "/artigos/$slug",
-  path: "/artigos/$slug",
+  id: '/artigos/$slug',
+  path: '/artigos/$slug',
   getParentRoute: () => AdminPanelRouteRoute,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/admin": typeof AdminPanelRouteRouteWithChildren;
-  "/blog/$slug": typeof BlogSlugRoute;
-  "/about/": typeof AboutIndexRoute;
-  "/blog/": typeof BlogIndexRoute;
-  "/contact/": typeof ContactIndexRoute;
-  "/creative/": typeof CreativeIndexRoute;
-  "/admin/categorias": typeof AdminPanelCategoriasRoute;
-  "/admin/creative": typeof AdminPanelCreativeRoute;
-  "/admin/depoimentos": typeof AdminPanelDepoimentosRoute;
-  "/admin/experiencia": typeof AdminPanelExperienciaRoute;
-  "/admin/mensagens": typeof AdminPanelMensagensRoute;
-  "/admin/newsletter": typeof AdminPanelNewsletterRoute;
-  "/admin/perfil": typeof AdminPanelPerfilRoute;
-  "/admin/projectos": typeof AdminPanelProjectosRoute;
-  "/admin/servicos-faq": typeof AdminPanelServicosFaqRoute;
-  "/admin/skills": typeof AdminPanelSkillsRoute;
-  "/admin/sign-in/$": typeof AdminSignInSplatRoute;
-  "/admin/": typeof AdminPanelIndexRoute;
-  "/admin/artigos/$slug": typeof AdminPanelArtigosSlugRoute;
-  "/admin/artigos/": typeof AdminPanelArtigosIndexRoute;
+  '/': typeof IndexRoute
+  '/admin': typeof AdminPanelRouteRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
+  '/about/': typeof AboutIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/creative/': typeof CreativeIndexRoute
+  '/admin/categorias': typeof AdminPanelCategoriasRoute
+  '/admin/creative': typeof AdminPanelCreativeRoute
+  '/admin/depoimentos': typeof AdminPanelDepoimentosRoute
+  '/admin/experiencia': typeof AdminPanelExperienciaRoute
+  '/admin/mensagens': typeof AdminPanelMensagensRoute
+  '/admin/newsletter': typeof AdminPanelNewsletterRoute
+  '/admin/perfil': typeof AdminPanelPerfilRoute
+  '/admin/projectos': typeof AdminPanelProjectosRoute
+  '/admin/servicos-faq': typeof AdminPanelServicosFaqRoute
+  '/admin/skills': typeof AdminPanelSkillsRoute
+  '/admin/sign-in/$': typeof AdminSignInSplatRoute
+  '/admin/': typeof AdminPanelIndexRoute
+  '/admin/artigos/$slug': typeof AdminPanelArtigosSlugRoute
+  '/admin/artigos/': typeof AdminPanelArtigosIndexRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/blog/$slug": typeof BlogSlugRoute;
-  "/about": typeof AboutIndexRoute;
-  "/blog": typeof BlogIndexRoute;
-  "/contact": typeof ContactIndexRoute;
-  "/creative": typeof CreativeIndexRoute;
-  "/admin/categorias": typeof AdminPanelCategoriasRoute;
-  "/admin/creative": typeof AdminPanelCreativeRoute;
-  "/admin/depoimentos": typeof AdminPanelDepoimentosRoute;
-  "/admin/experiencia": typeof AdminPanelExperienciaRoute;
-  "/admin/mensagens": typeof AdminPanelMensagensRoute;
-  "/admin/newsletter": typeof AdminPanelNewsletterRoute;
-  "/admin/perfil": typeof AdminPanelPerfilRoute;
-  "/admin/projectos": typeof AdminPanelProjectosRoute;
-  "/admin/servicos-faq": typeof AdminPanelServicosFaqRoute;
-  "/admin/skills": typeof AdminPanelSkillsRoute;
-  "/admin/sign-in/$": typeof AdminSignInSplatRoute;
-  "/admin": typeof AdminPanelIndexRoute;
-  "/admin/artigos/$slug": typeof AdminPanelArtigosSlugRoute;
-  "/admin/artigos": typeof AdminPanelArtigosIndexRoute;
+  '/': typeof IndexRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/about': typeof AboutIndexRoute
+  '/blog': typeof BlogIndexRoute
+  '/contact': typeof ContactIndexRoute
+  '/creative': typeof CreativeIndexRoute
+  '/admin/categorias': typeof AdminPanelCategoriasRoute
+  '/admin/creative': typeof AdminPanelCreativeRoute
+  '/admin/depoimentos': typeof AdminPanelDepoimentosRoute
+  '/admin/experiencia': typeof AdminPanelExperienciaRoute
+  '/admin/mensagens': typeof AdminPanelMensagensRoute
+  '/admin/newsletter': typeof AdminPanelNewsletterRoute
+  '/admin/perfil': typeof AdminPanelPerfilRoute
+  '/admin/projectos': typeof AdminPanelProjectosRoute
+  '/admin/servicos-faq': typeof AdminPanelServicosFaqRoute
+  '/admin/skills': typeof AdminPanelSkillsRoute
+  '/admin/sign-in/$': typeof AdminSignInSplatRoute
+  '/admin': typeof AdminPanelIndexRoute
+  '/admin/artigos/$slug': typeof AdminPanelArtigosSlugRoute
+  '/admin/artigos': typeof AdminPanelArtigosIndexRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  "/": typeof IndexRoute;
-  "/admin/_panel": typeof AdminPanelRouteRouteWithChildren;
-  "/blog/$slug": typeof BlogSlugRoute;
-  "/about/": typeof AboutIndexRoute;
-  "/blog/": typeof BlogIndexRoute;
-  "/contact/": typeof ContactIndexRoute;
-  "/creative/": typeof CreativeIndexRoute;
-  "/admin/_panel/categorias": typeof AdminPanelCategoriasRoute;
-  "/admin/_panel/creative": typeof AdminPanelCreativeRoute;
-  "/admin/_panel/depoimentos": typeof AdminPanelDepoimentosRoute;
-  "/admin/_panel/experiencia": typeof AdminPanelExperienciaRoute;
-  "/admin/_panel/mensagens": typeof AdminPanelMensagensRoute;
-  "/admin/_panel/newsletter": typeof AdminPanelNewsletterRoute;
-  "/admin/_panel/perfil": typeof AdminPanelPerfilRoute;
-  "/admin/_panel/projectos": typeof AdminPanelProjectosRoute;
-  "/admin/_panel/servicos-faq": typeof AdminPanelServicosFaqRoute;
-  "/admin/_panel/skills": typeof AdminPanelSkillsRoute;
-  "/admin/sign-in/$": typeof AdminSignInSplatRoute;
-  "/admin/_panel/": typeof AdminPanelIndexRoute;
-  "/admin/_panel/artigos/$slug": typeof AdminPanelArtigosSlugRoute;
-  "/admin/_panel/artigos/": typeof AdminPanelArtigosIndexRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/admin/_panel': typeof AdminPanelRouteRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
+  '/about/': typeof AboutIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/creative/': typeof CreativeIndexRoute
+  '/admin/_panel/categorias': typeof AdminPanelCategoriasRoute
+  '/admin/_panel/creative': typeof AdminPanelCreativeRoute
+  '/admin/_panel/depoimentos': typeof AdminPanelDepoimentosRoute
+  '/admin/_panel/experiencia': typeof AdminPanelExperienciaRoute
+  '/admin/_panel/mensagens': typeof AdminPanelMensagensRoute
+  '/admin/_panel/newsletter': typeof AdminPanelNewsletterRoute
+  '/admin/_panel/perfil': typeof AdminPanelPerfilRoute
+  '/admin/_panel/projectos': typeof AdminPanelProjectosRoute
+  '/admin/_panel/servicos-faq': typeof AdminPanelServicosFaqRoute
+  '/admin/_panel/skills': typeof AdminPanelSkillsRoute
+  '/admin/sign-in/$': typeof AdminSignInSplatRoute
+  '/admin/_panel/': typeof AdminPanelIndexRoute
+  '/admin/_panel/artigos/$slug': typeof AdminPanelArtigosSlugRoute
+  '/admin/_panel/artigos/': typeof AdminPanelArtigosIndexRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
+  fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | "/"
-    | "/admin"
-    | "/blog/$slug"
-    | "/about/"
-    | "/blog/"
-    | "/contact/"
-    | "/creative/"
-    | "/admin/categorias"
-    | "/admin/creative"
-    | "/admin/depoimentos"
-    | "/admin/experiencia"
-    | "/admin/mensagens"
-    | "/admin/newsletter"
-    | "/admin/perfil"
-    | "/admin/projectos"
-    | "/admin/servicos-faq"
-    | "/admin/skills"
-    | "/admin/sign-in/$"
-    | "/admin/"
-    | "/admin/artigos/$slug"
-    | "/admin/artigos/";
-  fileRoutesByTo: FileRoutesByTo;
+    | '/'
+    | '/admin'
+    | '/blog/$slug'
+    | '/about/'
+    | '/blog/'
+    | '/contact/'
+    | '/creative/'
+    | '/admin/categorias'
+    | '/admin/creative'
+    | '/admin/depoimentos'
+    | '/admin/experiencia'
+    | '/admin/mensagens'
+    | '/admin/newsletter'
+    | '/admin/perfil'
+    | '/admin/projectos'
+    | '/admin/servicos-faq'
+    | '/admin/skills'
+    | '/admin/sign-in/$'
+    | '/admin/'
+    | '/admin/artigos/$slug'
+    | '/admin/artigos/'
+  fileRoutesByTo: FileRoutesByTo
   to:
-    | "/"
-    | "/blog/$slug"
-    | "/about"
-    | "/blog"
-    | "/contact"
-    | "/creative"
-    | "/admin/categorias"
-    | "/admin/creative"
-    | "/admin/depoimentos"
-    | "/admin/experiencia"
-    | "/admin/mensagens"
-    | "/admin/newsletter"
-    | "/admin/perfil"
-    | "/admin/projectos"
-    | "/admin/servicos-faq"
-    | "/admin/skills"
-    | "/admin/sign-in/$"
-    | "/admin"
-    | "/admin/artigos/$slug"
-    | "/admin/artigos";
+    | '/'
+    | '/blog/$slug'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/creative'
+    | '/admin/categorias'
+    | '/admin/creative'
+    | '/admin/depoimentos'
+    | '/admin/experiencia'
+    | '/admin/mensagens'
+    | '/admin/newsletter'
+    | '/admin/perfil'
+    | '/admin/projectos'
+    | '/admin/servicos-faq'
+    | '/admin/skills'
+    | '/admin/sign-in/$'
+    | '/admin'
+    | '/admin/artigos/$slug'
+    | '/admin/artigos'
   id:
-    | "__root__"
-    | "/"
-    | "/admin/_panel"
-    | "/blog/$slug"
-    | "/about/"
-    | "/blog/"
-    | "/contact/"
-    | "/creative/"
-    | "/admin/_panel/categorias"
-    | "/admin/_panel/creative"
-    | "/admin/_panel/depoimentos"
-    | "/admin/_panel/experiencia"
-    | "/admin/_panel/mensagens"
-    | "/admin/_panel/newsletter"
-    | "/admin/_panel/perfil"
-    | "/admin/_panel/projectos"
-    | "/admin/_panel/servicos-faq"
-    | "/admin/_panel/skills"
-    | "/admin/sign-in/$"
-    | "/admin/_panel/"
-    | "/admin/_panel/artigos/$slug"
-    | "/admin/_panel/artigos/";
-  fileRoutesById: FileRoutesById;
+    | '__root__'
+    | '/'
+    | '/admin/_panel'
+    | '/blog/$slug'
+    | '/about/'
+    | '/blog/'
+    | '/contact/'
+    | '/creative/'
+    | '/admin/_panel/categorias'
+    | '/admin/_panel/creative'
+    | '/admin/_panel/depoimentos'
+    | '/admin/_panel/experiencia'
+    | '/admin/_panel/mensagens'
+    | '/admin/_panel/newsletter'
+    | '/admin/_panel/perfil'
+    | '/admin/_panel/projectos'
+    | '/admin/_panel/servicos-faq'
+    | '/admin/_panel/skills'
+    | '/admin/sign-in/$'
+    | '/admin/_panel/'
+    | '/admin/_panel/artigos/$slug'
+    | '/admin/_panel/artigos/'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  AdminPanelRouteRoute: typeof AdminPanelRouteRouteWithChildren;
-  BlogSlugRoute: typeof BlogSlugRoute;
-  AboutIndexRoute: typeof AboutIndexRoute;
-  BlogIndexRoute: typeof BlogIndexRoute;
-  ContactIndexRoute: typeof ContactIndexRoute;
-  CreativeIndexRoute: typeof CreativeIndexRoute;
-  AdminSignInSplatRoute: typeof AdminSignInSplatRoute;
+  IndexRoute: typeof IndexRoute
+  AdminPanelRouteRoute: typeof AdminPanelRouteRouteWithChildren
+  BlogSlugRoute: typeof BlogSlugRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  ContactIndexRoute: typeof ContactIndexRoute
+  CreativeIndexRoute: typeof CreativeIndexRoute
+  AdminSignInSplatRoute: typeof AdminSignInSplatRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/about/": {
-      id: "/about/";
-      path: "/about";
-      fullPath: "/about/";
-      preLoaderRoute: typeof AboutIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/admin/_panel": {
-      id: "/admin/_panel";
-      path: "/admin";
-      fullPath: "/admin";
-      preLoaderRoute: typeof AdminPanelRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/blog/": {
-      id: "/blog/";
-      path: "/blog";
-      fullPath: "/blog/";
-      preLoaderRoute: typeof BlogIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/blog/$slug": {
-      id: "/blog/$slug";
-      path: "/blog/$slug";
-      fullPath: "/blog/$slug";
-      preLoaderRoute: typeof BlogSlugRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/contact/": {
-      id: "/contact/";
-      path: "/contact";
-      fullPath: "/contact/";
-      preLoaderRoute: typeof ContactIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/creative/": {
-      id: "/creative/";
-      path: "/creative";
-      fullPath: "/creative/";
-      preLoaderRoute: typeof CreativeIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/admin/_panel/": {
-      id: "/admin/_panel/";
-      path: "/";
-      fullPath: "/admin/";
-      preLoaderRoute: typeof AdminPanelIndexRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/categorias": {
-      id: "/admin/_panel/categorias";
-      path: "/categorias";
-      fullPath: "/admin/categorias";
-      preLoaderRoute: typeof AdminPanelCategoriasRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/creative": {
-      id: "/admin/_panel/creative";
-      path: "/creative";
-      fullPath: "/admin/creative";
-      preLoaderRoute: typeof AdminPanelCreativeRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/depoimentos": {
-      id: "/admin/_panel/depoimentos";
-      path: "/depoimentos";
-      fullPath: "/admin/depoimentos";
-      preLoaderRoute: typeof AdminPanelDepoimentosRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/experiencia": {
-      id: "/admin/_panel/experiencia";
-      path: "/experiencia";
-      fullPath: "/admin/experiencia";
-      preLoaderRoute: typeof AdminPanelExperienciaRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/mensagens": {
-      id: "/admin/_panel/mensagens";
-      path: "/mensagens";
-      fullPath: "/admin/mensagens";
-      preLoaderRoute: typeof AdminPanelMensagensRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/newsletter": {
-      id: "/admin/_panel/newsletter";
-      path: "/newsletter";
-      fullPath: "/admin/newsletter";
-      preLoaderRoute: typeof AdminPanelNewsletterRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/perfil": {
-      id: "/admin/_panel/perfil";
-      path: "/perfil";
-      fullPath: "/admin/perfil";
-      preLoaderRoute: typeof AdminPanelPerfilRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/projectos": {
-      id: "/admin/_panel/projectos";
-      path: "/projectos";
-      fullPath: "/admin/projectos";
-      preLoaderRoute: typeof AdminPanelProjectosRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/servicos-faq": {
-      id: "/admin/_panel/servicos-faq";
-      path: "/servicos-faq";
-      fullPath: "/admin/servicos-faq";
-      preLoaderRoute: typeof AdminPanelServicosFaqRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/skills": {
-      id: "/admin/_panel/skills";
-      path: "/skills";
-      fullPath: "/admin/skills";
-      preLoaderRoute: typeof AdminPanelSkillsRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/sign-in/$": {
-      id: "/admin/sign-in/$";
-      path: "/admin/sign-in/$";
-      fullPath: "/admin/sign-in/$";
-      preLoaderRoute: typeof AdminSignInSplatRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/admin/_panel/artigos/": {
-      id: "/admin/_panel/artigos/";
-      path: "/artigos";
-      fullPath: "/admin/artigos/";
-      preLoaderRoute: typeof AdminPanelArtigosIndexRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
-    "/admin/_panel/artigos/$slug": {
-      id: "/admin/_panel/artigos/$slug";
-      path: "/artigos/$slug";
-      fullPath: "/admin/artigos/$slug";
-      preLoaderRoute: typeof AdminPanelArtigosSlugRouteImport;
-      parentRoute: typeof AdminPanelRouteRoute;
-    };
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/_panel': {
+      id: '/admin/_panel'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminPanelRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact/': {
+      id: '/contact/'
+      path: '/contact'
+      fullPath: '/contact/'
+      preLoaderRoute: typeof ContactIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creative/': {
+      id: '/creative/'
+      path: '/creative'
+      fullPath: '/creative/'
+      preLoaderRoute: typeof CreativeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/_panel/': {
+      id: '/admin/_panel/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminPanelIndexRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/categorias': {
+      id: '/admin/_panel/categorias'
+      path: '/categorias'
+      fullPath: '/admin/categorias'
+      preLoaderRoute: typeof AdminPanelCategoriasRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/creative': {
+      id: '/admin/_panel/creative'
+      path: '/creative'
+      fullPath: '/admin/creative'
+      preLoaderRoute: typeof AdminPanelCreativeRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/depoimentos': {
+      id: '/admin/_panel/depoimentos'
+      path: '/depoimentos'
+      fullPath: '/admin/depoimentos'
+      preLoaderRoute: typeof AdminPanelDepoimentosRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/experiencia': {
+      id: '/admin/_panel/experiencia'
+      path: '/experiencia'
+      fullPath: '/admin/experiencia'
+      preLoaderRoute: typeof AdminPanelExperienciaRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/mensagens': {
+      id: '/admin/_panel/mensagens'
+      path: '/mensagens'
+      fullPath: '/admin/mensagens'
+      preLoaderRoute: typeof AdminPanelMensagensRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/newsletter': {
+      id: '/admin/_panel/newsletter'
+      path: '/newsletter'
+      fullPath: '/admin/newsletter'
+      preLoaderRoute: typeof AdminPanelNewsletterRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/perfil': {
+      id: '/admin/_panel/perfil'
+      path: '/perfil'
+      fullPath: '/admin/perfil'
+      preLoaderRoute: typeof AdminPanelPerfilRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/projectos': {
+      id: '/admin/_panel/projectos'
+      path: '/projectos'
+      fullPath: '/admin/projectos'
+      preLoaderRoute: typeof AdminPanelProjectosRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/servicos-faq': {
+      id: '/admin/_panel/servicos-faq'
+      path: '/servicos-faq'
+      fullPath: '/admin/servicos-faq'
+      preLoaderRoute: typeof AdminPanelServicosFaqRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/skills': {
+      id: '/admin/_panel/skills'
+      path: '/skills'
+      fullPath: '/admin/skills'
+      preLoaderRoute: typeof AdminPanelSkillsRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/sign-in/$': {
+      id: '/admin/sign-in/$'
+      path: '/admin/sign-in/$'
+      fullPath: '/admin/sign-in/$'
+      preLoaderRoute: typeof AdminSignInSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/_panel/artigos/': {
+      id: '/admin/_panel/artigos/'
+      path: '/artigos'
+      fullPath: '/admin/artigos/'
+      preLoaderRoute: typeof AdminPanelArtigosIndexRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
+    '/admin/_panel/artigos/$slug': {
+      id: '/admin/_panel/artigos/$slug'
+      path: '/artigos/$slug'
+      fullPath: '/admin/artigos/$slug'
+      preLoaderRoute: typeof AdminPanelArtigosSlugRouteImport
+      parentRoute: typeof AdminPanelRouteRoute
+    }
   }
 }
 
 interface AdminPanelRouteRouteChildren {
-  AdminPanelCategoriasRoute: typeof AdminPanelCategoriasRoute;
-  AdminPanelCreativeRoute: typeof AdminPanelCreativeRoute;
-  AdminPanelDepoimentosRoute: typeof AdminPanelDepoimentosRoute;
-  AdminPanelExperienciaRoute: typeof AdminPanelExperienciaRoute;
-  AdminPanelMensagensRoute: typeof AdminPanelMensagensRoute;
-  AdminPanelNewsletterRoute: typeof AdminPanelNewsletterRoute;
-  AdminPanelPerfilRoute: typeof AdminPanelPerfilRoute;
-  AdminPanelProjectosRoute: typeof AdminPanelProjectosRoute;
-  AdminPanelServicosFaqRoute: typeof AdminPanelServicosFaqRoute;
-  AdminPanelSkillsRoute: typeof AdminPanelSkillsRoute;
-  AdminPanelIndexRoute: typeof AdminPanelIndexRoute;
-  AdminPanelArtigosSlugRoute: typeof AdminPanelArtigosSlugRoute;
-  AdminPanelArtigosIndexRoute: typeof AdminPanelArtigosIndexRoute;
+  AdminPanelCategoriasRoute: typeof AdminPanelCategoriasRoute
+  AdminPanelCreativeRoute: typeof AdminPanelCreativeRoute
+  AdminPanelDepoimentosRoute: typeof AdminPanelDepoimentosRoute
+  AdminPanelExperienciaRoute: typeof AdminPanelExperienciaRoute
+  AdminPanelMensagensRoute: typeof AdminPanelMensagensRoute
+  AdminPanelNewsletterRoute: typeof AdminPanelNewsletterRoute
+  AdminPanelPerfilRoute: typeof AdminPanelPerfilRoute
+  AdminPanelProjectosRoute: typeof AdminPanelProjectosRoute
+  AdminPanelServicosFaqRoute: typeof AdminPanelServicosFaqRoute
+  AdminPanelSkillsRoute: typeof AdminPanelSkillsRoute
+  AdminPanelIndexRoute: typeof AdminPanelIndexRoute
+  AdminPanelArtigosSlugRoute: typeof AdminPanelArtigosSlugRoute
+  AdminPanelArtigosIndexRoute: typeof AdminPanelArtigosIndexRoute
 }
 
 const AdminPanelRouteRouteChildren: AdminPanelRouteRouteChildren = {
@@ -470,11 +470,11 @@ const AdminPanelRouteRouteChildren: AdminPanelRouteRouteChildren = {
   AdminPanelIndexRoute: AdminPanelIndexRoute,
   AdminPanelArtigosSlugRoute: AdminPanelArtigosSlugRoute,
   AdminPanelArtigosIndexRoute: AdminPanelArtigosIndexRoute,
-};
+}
 
 const AdminPanelRouteRouteWithChildren = AdminPanelRouteRoute._addFileChildren(
   AdminPanelRouteRouteChildren,
-);
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -485,17 +485,17 @@ const rootRouteChildren: RootRouteChildren = {
   ContactIndexRoute: ContactIndexRoute,
   CreativeIndexRoute: CreativeIndexRoute,
   AdminSignInSplatRoute: AdminSignInSplatRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
 
-import type { getRouter } from "./router.tsx";
-import type { startInstance } from "./start.ts";
-declare module "@tanstack/react-start" {
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
   interface Register {
-    ssr: true;
-    router: Awaited<ReturnType<typeof getRouter>>;
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>;
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }

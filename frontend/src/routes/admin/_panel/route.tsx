@@ -17,15 +17,18 @@ const getAdminSession = createServerFn({ method: "GET" }).handler(async () => {
 
 export const Route = createFileRoute("/admin/_panel")({
   beforeLoad: async () => {
-    const session = await getAdminSession();
-
-    if (!session.isAuthenticated) {
-      throw redirect({ to: "/admin/sign-in/$", params: { _splat: "" } });
+    try {
+      const session = await getAdminSession();
+      if (!session.isAuthenticated) {
+        throw redirect({ to: "/admin/sign-in/$", params: { _splat: "" } });
+      }
+      if (session.role !== "admin") {
+        throw redirect({ to: "/" });
+      }
+      return { session };
+    } catch (error) {
+      console.error((error as Error).message);
     }
-    if (session.role !== "admin") {
-      throw redirect({ to: "/" });
-    }
-    return { session };
   },
   head: () => ({
     meta: [
